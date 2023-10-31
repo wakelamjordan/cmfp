@@ -1,0 +1,289 @@
+:root{
+    --ColoPrincipale: #3D392A;
+    --ColoSecondaire: #3A0233;
+    --ColorSecondaireContenant: rgba(134, 110, 110, 0.301);
+    --ColorLink: #C19101;
+    --TextShad:#111;
+    --TextShad2:#2c0202;
+}
+
+/* font------------------- */
+
+@font-face{
+    font-family:"titre";
+
+    src:url("font/title/title.woff") format("woff"), url("font/title/title.woff2") format("woff2");
+
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face{
+    font-family: "text";
+
+    src:url("font/text/text.woff") format("woff"), url("font/text/text.woff2") format("woff2");
+
+    font-weight:normal;
+    font-style:normal;
+}
+
+* a{
+    /* font | style | variant | wh | str | l-hg | ff */
+    font-size: 1.5rem;
+
+    font-weight: 1000;
+
+    font-family: "text", "Brush Script MT", cursive;
+
+    text-shadow: 1px 1px 2px var(--TextShad), 1px -1px 2px var(--TextShad), -1px -1px 2px var(--TextShad), -1px 1px 2px var(--TextShad);
+
+    color:var(--ColorLink);
+
+    text-decoration: none;
+
+}
+
+
+body{
+    min-height:100vh;
+
+    background-color: var(--ColoPrincipale);
+
+    font-family: "text", "Brush Script MT", cursive;
+
+    color:#fff;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    padding-top:3vw;
+
+}
+
+/* header------------------------- */
+
+header{
+    /* background-color:antiquewhite; */
+
+}
+
+    /* titre page ---------------- */
+
+    .title h1{
+        font: 8vw/0.7 "titre", "Brush Script MT", cursive;
+
+        text-align:center;
+
+        padding:20px 0 20px 0;
+
+    }
+
+    .smal{
+        font-size: 50%;
+    }
+
+    /* navbar ---------------- */
+
+    nav{
+        background-color: var(--ColoSecondaire);
+    }
+
+    menu{
+        display:flex;
+
+        justify-content: space-around;
+
+        padding:10px;
+
+        list-style: none;
+    }
+
+
+
+/* main------------------------------- */
+
+main{
+    background-color:rgb(94, 94, 94);
+
+    padding:10px;
+
+    flex-grow:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    /* align-items:center; */
+}
+
+section{
+    align-self:center;
+}
+
+iframe{
+    height:200px;
+    width:60vw;
+
+    /* margin-left:auto; */
+
+    /* margin: auto auto; */
+
+    border-radius:15px;
+
+}
+
+.diaporama{
+
+    margin:0 auto;
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    border: 3px solid #C19101;
+    background-image:url("/image/rang1.jpg");
+
+    -webkit-animation-name: team;
+    -webkit-animation-duration: 20s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+
+    -moz-animation-name: team;
+    -moz-animation-duration: 20s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count:infinite;
+    -moz-animation-direction:normal;
+
+    animation-name: team;
+    animation-duration: 20s;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+    animation-direction:normal;
+}
+
+@-webkit-keyframes team{
+    0%{background-image:url("/image/rang1.jpg");}
+    20%{background-image:url("/image/rang2.jpg");}
+    40%{background-image:url("/image/cdg1.jpg");}
+    60%{background-image:url("/image/gv1.jpg");}
+    80%{background-image:url("/image/gv2.jpg");}
+}
+
+/* footer--------------------------------- */
+
+footer{
+    background-color:var(--ColoSecondaire);
+
+    padding:10px 10% 10px 10%;
+
+    height:fit-content;
+
+}
+
+.cac{
+    display:flex;
+
+    justify-content:space-between;
+
+    height:fit-content;
+
+    flex-wrap:wrap;
+
+    /* justify-content: space-around; */
+
+    align-content:space-between;
+
+}
+
+address{
+    background-color:var(--ColorSecondaireContenant);
+
+    padding:10px;
+
+    height:auto;
+
+    border-radius:15px;
+
+    box-shadow:1px 1px 10px #111;
+
+    display:flex;
+
+    flex-direction:column;
+
+    margin:10px 0 10px 0;
+
+    /* align-items: center; */
+
+}
+
+/* pour le crée par */
+
+.right{
+    text-align:end;
+}
+
+/* pour le nous contacter et crée*/
+
+.footertit{
+    font-family:"titre", "Brush Script MT", cursive;
+
+    font-size:1.6rem;
+
+    padding:20px 0 20px 0;
+
+    text-shadow: 1px 1px var(--TextShad2), 1px -1px var(--TextShad2), -1px -1px var(--TextShad2), -1px 1px var(--TextShad2);
+
+}
+
+footer h1, h2{
+    padding:8px 0 10px 0;
+}
+
+.mailcrea{
+    font-size:1rem;
+}
+
+/* sur mobile */
+
+@media(max-width:500px){
+    body{
+        /* background-color:antiquewhite; */
+    }
+
+    .title h1{
+        font: 48px/0.7 "titre", "Brush Script MT", cursive;
+
+        text-align:center;
+
+        padding:20px 0 20px 0;
+
+    }
+
+
+    .cac div, address{
+        text-align: left;
+
+    }
+
+    .cac{
+        justify-content:center;
+    }
+
+    footer h1, h2{
+        padding:8px 0 10px 0;
+        text-align: center;
+    }
+
+    iframe{
+        width:90vw;
+    
+    }
+
+    div{
+        margin: 0 10px 0 10px;
+    }
+}

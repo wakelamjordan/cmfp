@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="code de wakelam jordan pour sa signature en html">
+    <title>Création d'une signature de mail perso</title>
+
+    <style>
+        .firstpart{
+            /* padding général */
+            padding:20px;
+            /* couleur de fond général */
+            background-color:rgb(184, 184, 184);
+            /* largeur de la signature */
+            width:300px;
+            /* centrage de la signature sur le mail */
+            margin-left:auto;
+            margin-right:auto;
+            /* bord arrondi */
+            border-radius:15px
+        }
+
+        .nom{
+            /* taille de caractères */
+            font-size:22px;
+            /* mise en gras */
+            font-weight:bold;
+        }
+
+        .italic{
+            /* mise en italic */
+            font-style:italic;
+        }
+
+        .contact{
+            /* marge en haut pour les informations de contacte */
+            margin-top:20px;
+        }
+
+        a{
+            /* couleur de lien */
+            color:#180101;
+        }
+
+        .social{
+            /* centrage de la barre de logo au centre de la signature */
+            margin-left:auto;
+            margin-right:auto;
+            /* marge en haut pour la barre de lien sociaux */
+            margin-top:20px;
+            /* couleur de fond de la barre */
+            background-color:rgb(250, 250, 250);
+            /* bords arrondi pour la barre */
+            border-radius:15px;
+            /* ombre porté par la barre */
+            box-shadow:2px 2px 10px rgb(117, 117, 117);
+            /* hauteur de la barre de lien */
+            height:50px;
+        }
+
+        .social td{
+            /* largeur des cases contenant les logos */
+            width:50px;
+            /* centrage des logo dans leurs cases */
+            text-align:center;
+        }
+
+        
+    </style>
+
+</head>
+<body>
+    <div class="firstpart">
+        <!-- left part : id + coordonnées-->
+        <div class="nom">Prénom Nom</div>
+
+        <div class="italic">fonction/poste/métier</div>
+        
+        <table class="contact">
+            <tr>
+                <td><a href="mailto:votre adresse mail"><img src="https://i.goopics.net/86bw55.png" alt="logo enveloppe"></a></td>
+                <td><a href="mailto:votre adresse mail">votre-email@mail.com</a></td>
+            </tr>
+            <tr>
+                <td><img src="https://i.goopics.net/vveqlf.png" alt="logo t&eacute;l&eacute;phone"></td>
+                <td>00 00 00 00 00</td>
+            </tr>
+            <tr>
+                <td><img src="https://i.goopics.net/g7acmi.png" alt="logo position"></td>
+                <td>Ville code postale</td>
+            </tr>
+        </table>
+
+        <!-- right part : social link -->
+        <table class="social">
+            <tr>
+                <td>
+                    <a href="Votre lien de profil linkedin"><img src="https://i.goopics.net/bvtihc.png" alt="logo linkedin"></a>
+                </td>
+                <td>
+                    <a href="Votre lien de profil github"><img src="https://i.goopics.net/ov7k2n.png" alt="logo github"></a>
+                </td>
+                <td>
+                    <a href="Votre lien vers votre cv en ligne"><img src="https://i.goopics.net/d4guxs.png" alt="logo cv"></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>
+

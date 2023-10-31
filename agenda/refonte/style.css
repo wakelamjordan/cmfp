@@ -1,0 +1,168 @@
+#logo, ul{
+    width:100px;
+}
+
+a{
+    color:black;
+
+    text-decoration:none;
+}
+
+body{
+    background-color:aliceblue;
+    padding:20px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+
+    height:100vh;
+}
+
+footer{
+    background-color:blueviolet;
+}
+
+/* ---------header---------- */
+
+header{
+    padding:10px;
+}
+
+menu,ul,li{
+    list-style:none;
+    margin: 0;
+    padding:0;
+    font-size: 35px;
+}
+
+ul{
+    display:none;
+}
+
+.sub li{
+    background-color: rgb(116, 186, 248);
+    color: black;
+}
+
+.sub li:hover{
+    background-color: rgb(64, 141, 87);
+}
+
+.sub li{
+    padding:10px;
+    text-align:center;
+}
+
+li a:hover{
+    color:#fff;
+}
+
+menu li:hover ul{
+    display:block;
+    position:absolute;
+}
+
+.sub li:last-child{
+    border-radius:0 0 15px 15px;
+}
+
+/* -----------main--------------- */
+
+main{
+    /* display:flex; */
+    display: grid;
+    grid-template-columns: 25% 75%;
+    padding:10px;
+}
+
+
+form div{
+    background-color:chocolate;
+    border-radius: 15px;
+    padding:10px;
+}
+
+aside{
+    /* height:100%; */
+}
+
+
+form{
+    display:grid;
+    grid-template-areas: "line1 line1 line1 line1" "line2 line2 line2 line2" "line3 line3 line4 line4" "line5 line5 line5 line5" "line6 line6 line6 line6";
+    gap: 8px;
+    height:100%;
+}
+
+form *{
+    display:flex;
+    justify-content: space-around;
+}
+
+#line1{
+    grid-area: line1;
+}
+
+#line2{
+    grid-area: line2;
+}
+
+
+#line3{
+    grid-area: line3;
+
+}
+
+#line4{
+    grid-area: line4;
+}
+
+#line5{
+    grid-area: line5;
+    text-align: center;
+}
+
+#line6{
+    grid-area: line6;
+    text-align:center;
+}
+
+/* #line6 input{
+    width:20px;
+} */
+
+#line3 input, #line4 input{
+    flex-grow: 1;
+    text-align: center;
+}
+
+div input:not(.addEvent), div textarea{
+    border-radius: 15px;
+    flex-grow:1;
+}
+
+.addEvent{
+    width: 80px;
+}
+
+#line6:hover{
+    box-shadow: 5px 5px 20px black, -5px 5px 20px black, -5px -5px 20px black, 5px -5px 20px black;
+}
+
+@media screen and (max-width: 600px) {
+
+    form *:not(#line6,.addEvent){
+        display:none;
+    }
+
+    main, #line6, form{
+        display:block;
+    }    
+
+    #line6{
+        width:fit-content;
+    }
+
+    
+}

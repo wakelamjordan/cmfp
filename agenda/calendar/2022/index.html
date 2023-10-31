@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="description" content="agenda personnel, ici gardez le contr&ocirc;le de votre temps en g&eacute;rant au mieux votre emplois du temps, n'oubliez plus rien&excl;">
+
+    <title>Agenda</title>
+
+    <!-- <link rel="stylesheet" href="../wakelamjordan.github.io/style/reset.css"> -->
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+    
+    <header>
+        <a href="/index.html"><img src="/image/logo.svg" id="logo" alt="Logo agenda"></a>
+
+        <nav>
+            <menu>
+                <li><a href="#">Mode sombre</a></li>
+                <li><a href="#">Mode acc&eacute;ssibilit&eacute;</a></li>
+                <li><a href="#">Param&eacute;tres</a></li>
+            </menu>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <aside>
+
+            <form action="/create" method="post" class="create">
+
+                <legend>Cr&eacute;er</legend>
+
+                <fieldset>
+                    <div>
+                        <input type="radio" name="event" id="event">
+                        <label for="event">&Eacute;v&eacute;nement</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="tache" id="tache">
+                        <label for="tache">T&acirc;che</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="rdv" id="rdv">
+                        <label for="rdv">Rendez-vous</label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+
+                    <label for="titre">Titre:</label>
+                    <input type="text" name="titre" id="titre">
+
+                    <label for="date">Date:</label>
+                    <input type="date" name="date" id="date">
+
+                    <label for="time">Heure:</label>
+                    <input type="time" name="time" id="time">
+
+                    <label for="position">Lieu:</label>
+                    <input type="text" name="position" id="position">
+
+                    <label for="description">D&eacute;scription:</label>
+                    <textarea name="description" id="description" cols="30" rows="10"></textarea>
+
+                </fieldset>
+
+                <input type="image" alt="Cr&eacute;er &eacute;v&eacute;nement" src="/image/add.svg" value="create" class="create">
+
+            </form>
+
+        </aside>
+
+        <!-- -------------section visuel de toutes les années--------------- -->
+        <section>
+
+            <div class="selectiondisplay">
+
+                <div id="select">
+                    
+                    <h1>2022</h1><a href="/calendar/2023/index.html"><img class="rightArrow" src="/image/fleche.svg" alt="fl&eacute;che de droite"></a>
+                </div>
+        
+                <nav>
+                    <h2>type d'affichage:</h2>
+                    <select name="echelle" id="echelle">
+                        <option value="day">jour</option>
+                        <option value="week">semaines</option>
+                        <option value="month">mois</option>
+                        <option value="year">années</option>
+                    </select>
+                </nav>
+
+            </div>
+
+            <!-- -----visuel----- -->
+            <div class="visuel">
+
+                <h2>Janvier</h2>
+
+            </div>
+
+            <div class="visuel">
+                
+                <h2>F&eacute;vrier</h2>
+
+            </div>
+
+            <div class="visuel">
+                
+                <h2>Mars</h2>
+
+            </div>
+
+            <div class="visuel">
+                
+                <h2>Avril</h2>
+
+            </div>
+
+            <div class="visuel">
+                
+                <h2>Mai</h2>
+
+            </div>
+
+            <div class="visuel">
+                
+                <h2>Juin</h2>
+
+            </div>
+
+            <div class="visuel">
+                
+                <h2>Juillet</h2>
+
+            </div>
+
+            <div class="visuel">
+                
+                <h2>Ao&ucirc;t</h2>
+
+            </div>
+
+            <div class="visuel">
+                
+                <h2>Septembre</h2>
+
+            </div>
+
+            <div class="visuel">
+                
+                <h2>Octobre</h2>
+
+            </div>
+
+            <div class="visuel">
+                
+                <h2>Novembre</h2>
+
+            </div>
+
+            <div class="visuel">
+                
+                <h2>D&eacute;cembre</h2>
+
+            </div>
+
+        </section>
+
+    </main>
+    
+</body>
+</html>
