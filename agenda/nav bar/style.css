@@ -1,0 +1,19 @@
+.contenaire{
+    background-color:#555;
+
+    /* display:inline-block; */
+}
+
+.div1{
+    background-color:rgb(21, 80, 148);
+
+    /* display:block; */
+}
+
+.div2{
+    background-color:rgb(226, 43, 43);
+}
+
+.div3{
+    background-color:rgb(43, 226, 58);
+}
