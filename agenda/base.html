@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,60 +11,82 @@
     <link rel="stylesheet" href="/reset.css">
     <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
 
     <header>
 
         <div id="logo"><a href="/index.html"><img src="/image/logo.svg" alt="Logo agenda"></a></div>
 
-        <div id="menu">
+        <div class="barre">
+            <div id="menu">
 
-            <nav>
-                <menu>
-                    <li title="menu"><span>Menu</span>
-                        <ul class="sub">
-                            <li><a href="#" title="mode sombre">mode sombre</a></li>
-                            <li><a href="#" title="mode acc&eacute;ssibilité">mode acc&eacute;ssibilité</a></li>
-                            <li><a href="#" title="param&eacute;tres">param&eacute;tres</a></li>
-                        </ul>
-                    </li>
-                </menu>
-            </nav>
+                <nav>
+                    <menu class="right">
+                        <li title="menu">
+                            <div class="pad">Menu</div>
+                            <ul class="sub">
+                                <li><a href="#" title="mode sombre" class="pad">mode sombre</a></li>
+                                <li><a href="#" title="mode acc&eacute;ssibilité" class="pad">mode
+                                        acc&eacute;ssibilité</a></li>
+                                <li><a href="#" title="param&eacute;tres" class="pad">param&eacute;tres</a></li>
+                            </ul>
+                        </li>
+                    </menu>
+                </nav>
 
-            <div>
-                <span>
-                    <a href="#" title="pr&eacute;c&eacute;dent">&#9664;</a> 2023 <a href="#" title="suivant">&#9654;</a>
-                </span>
+                <div class="navagenda">
+                    <a href="#" title="pr&eacute;c&eacute;dent" class="pad">&#9664;</a>
+                    <div class="pad"> 2023 </div><a href="#" title="suivant" class="pad"
+                        style="transform: rotate(180deg);">&#9664;</a>
+                </div>
+
+                <nav>
+                    <menu class="menuright">
+                        <li title="Echelle">
+                            <div class="pad">Echelle</div>
+                            <ul class="sub">
+                                <li><a href="#" title="en jours" class="pad">Jours</a></li>
+                                <li><a href="#" title="en semaines" class="pad">Semaines</a></li>
+                                <li><a href="#" title="en mois" class="pad">Mois</a></li>
+                                <li><a href="#" title="en années" class="pad">Ann&eacute;es</a></li>
+                            </ul>
+                        </li>
+                    </menu>
+
+                </nav>
+
             </div>
-
-            <nav class="droite">
-                <menu class="droite">
-                    <li title="Echelle" class="droite"><span>Echelle</span>
-                        <ul class="sub">
-                            <li><a href="#" title="en jours">Jours</a></li>
-                            <li><a href="#" title="en semaines">Semaines</a></li>
-                            <li><a href="#" title="en mois">Mois</a></li>
-                            <li><a href="#" title="en années">Ann&eacute;es</a></li>
-                        </ul>
-                    </li>
-                </menu>
-            </nav>
-
         </div>
 
     </header>
 
     <main>
-        <ul>
-            <li>Lorem, ipsum dolor.</li>
-            <li>Ut, ab architecto!</li>
-            <li>Labore, doloribus excepturi.</li>
-            <li>Natus, magnam vitae!</li>
-            <li>Odio, eius distinctio?</li>
-        </ul>
+        <aside>
+            <form action="/calendar/save.html" method="post">
+                <div id="radio">
+                    <label for="event">&Eacute;v&eacute;nement</label><input type="radio" name="type" id="event"
+                        riquired><br>
+
+                    <label for="taske">T&acirc;che</label><input type="radio" name="type" id="taske"><br>
+
+                    <label for="rdv">Rendez-vous</label><input type="radio" name="type" id="rdv"><br>
+                </div>
+                <input type="text" name="titre" id="titre" required placeholder="Titre">
+                <div id="datetime"><input type="date" name="date" id="date" required><input type="time" name="time"
+                        id="time" required>
+                </div>
+                <textarea name="description" id="desc" cols="30" rows="10" placeholder="Description"></textarea>
+                <div id="submit"><input type="image" src="/image/add.svg" alt="cr&eacute;er"></div>
+            </form>
+        </aside>
+        <section>
+            <div id="ajoutptb"><a href="/formulaire.html" ><img src="/image/add.svg" alt="formulaire d'ajout"></a></div>
+        </section>
     </main>
 
 
-    
+
 </body>
+
 </html>
